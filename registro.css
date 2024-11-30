@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -100,6 +101,7 @@ body{
     color: #f4f6f9;
     font-size: 40px;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 form {
