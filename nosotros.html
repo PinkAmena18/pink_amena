@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="nosotros.css">
+    <link rel="shortcut icon" href="images/osito.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="menu container">
+
+        <a href="#" class="logo"><img src="images/osito.png" ></a>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="images/menu.png" class="menu-icono" alt="">
+        </label>
+        <nav class="navbar">
+            <ul>
+                 <li><a href="index.html">Inicio</a></li>
+                 <li><a href="registro.html">formulario</a></li>
+                <li><a href="slider.html">productos</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <h1>Conoce a Nuestro Equipo</h1>
+    </header>
+
+    <main>
+        <section class="team-container">
+            <!-- Primer integrante -->
+            <article class="team-member">
+                <img src="images/stocking.jpeg" alt="Valerin Zapata">
+                <h2><i class="fa-solid fa-heart" style="color: #ffa8ec;"></i>Valerin Zapata<i class="fa-solid fa-heart" style="color: #ffa8ec;"></i></h2>
+                <p>Repostera</p>
+                <button class="description-btn" onclick="toggleDescription(this)">Ver Descripción</button>
+                <div class="description-box">
+                    <p>Crea sabores únicos combinando ingredientes de manera innovadora, con un toque personal que refleja creatividad y pasión. Especialista en la decoración y diseño de pasteles visualmente impresionante.</p>
+                </div>
+            </article>
+
+            <!-- Segundo integrante -->
+            <article class="team-member">
+                <img src="images/panty.jpeg" alt="Natalia">
+                <h2><i class="fa-solid fa-heart" style="color: #ffa8ec;"></i>Natalia Muñoz<i class="fa-solid fa-heart" style="color: #ffa8ec;"></i></h2>
+                <p>administradora</p>
+                <button class="description-btn" onclick="toggleDescription(this)">Ver Descripción</button>
+                <div class="description-box">
+                    <p> gestiona las operaciones diarias, incluyendo el control de inventarios, la atención al cliente y la organización de la tienda, asegurando un ambiente eficiente y productivo.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección de Visión y Misión -->
+        <section class="vision-section">
+            <div class="section-header">
+                <h2>Visión</h2>
+            </div>
+            <div class="section-content">
+                <p>A largo plazo, Pink Amena aspira a convertirse en un referente nacional
+                    e internacional en el mercado de donas artesanales. Queremos expandir
+                    nuestra presencia no solo a nivel local, sino también abrir nuevos puntos
+                    de venta en otras ciudades de Colombia y, eventualmente, en otros países
+                    de América Latina. Nos visualizamos como una marca que, además de
+                    ofrecer productos de excelente calidad, sea reconocida por su creatividad
+                    e innovación continua en la creación de nuevos sabores, respetando
+                    siempre la esencia artesanal de nuestros productos. Queremos ser líderes
+                    en el sector, inspirando a otros con nuestro compromiso con la
+                    sostenibilidad, la comunidad y el bienestar de nuestros colaboradores y
+                    clientes.</p>
+            </div>
+        </section>
+        
+        <section class="mission-section">
+            <div class="section-header">
+                <h2>Misión</h2>
+            </div>
+            <div class="section-content">
+                <p>En Pink Amena, nuestra misión es proporcionar a nuestros clientes
+                    una experiencia dulce e inolvidable a través de donas frescas,
+                    deliciosas y elaboradas artesanalmente. Nos comprometemos a usar
+                    ingredientes de la más alta calidad y a crear sabores innovadores que
+                    deleitan tanto a los amantes de lo clásico como a quienes buscan
+                    nuevas combinaciones. Valoramos la satisfacción de nuestros clientes
+                    y buscamos crear un vínculo cercano con cada uno de ellos mediante
+                    un servicio amable y personalizado. Nuestro objetivo es ser más que
+                    una simple tienda de donas: queremos ser el lugar al que nuestros
+                    clientes recurren para celebrar, compartir y disfrutar de momentos
+                    especiales.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="nosotros.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6daf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(images/uten.jpg);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+}
+
+.menu{
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo img:hover{
+    content: url(images/ositohover.png);
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #000;
+    display: block;
+    font-weight: 600;
+}
+
+
+.menu .navbar ul li a:hover{
+    color: violet;
+    font-size: 21px;
+    transition: 0.5s;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.form-content{
+    background: linear-gradient(
+        50deg,
+        rgb(208, 142, 195) 50%,
+        rgba(40,42,55,0.1)),
+        url(images/feid.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        width: 1000px;
+        border-radius: 25px;
+}
+
+.form-content h2{
+    color: #f4f6f9;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+label{
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+input , textarea {
+    padding: 17px 14px;
+    background-color: #ffd5f2;
+    border: 0;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+:focus{
+    outline: 1px solid #ff5f5f;
+}
+
+.btn{
+    background-color: #ff5f5f;
+    width: 150px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #ff8484;
+}
+
+@media(max-width:991px) {
+    body{
+        padding: 30px;
+    }
+
+    .form-content{
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+    }
+    .menu{
+        padding: 30px;
+    }
+    .menu label {
+        display: initial;
+    }
+    
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+     
+    }
+    
+    .menu .navbar ul li{
+        width: 100%;
+        color: #dfdfdf;
+    }
+    
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}

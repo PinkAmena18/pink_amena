@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: flex-start; /* Alinea los carruseles hacia el inicio del contenedor */
+    align-items: center; /* Centra horizontalmente los carruseles */
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #ffeef7; /* Fondo rosado pastel */
+}
+
+
+.menu{
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+.logo img:hover{
+    content: url(images/ositohover.png);
+}
+
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #000;
+    display: block;
+    font-weight: 600;
+}
+
+
+.menu .navbar ul li a:hover{
+    color: violet;
+    font-size: 21px;
+    transition: 0.5s;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.slider, .slider2, .slider3 {
+    width: 1300px;
+    overflow: hidden;
+    display: flex;
+    padding: 30px 10px;
+    position: relative;
+    margin-bottom: 40px; /* Espaciado entre los carruseles */
+}
+
+.slider .product, .slider2 .product2, .slider3 .product3 {
+    width: 400px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.slider .product img, .slider2 .product2 img, .slider3 .product3 img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.slider .product .information, .slider2 .product2 .information, .slider3 .product3 .information {
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    justify-content: space-between;
+}
+
+.slider .product .information .price, .slider2 .product2 .information .price, .slider3 .product3 .information .price {
+    font-size: 24px;
+}
+
+.slider .arrow, .slider2 .arrow, .slider3 .arrow {
+    width: 1300px;
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    top: 50%;
+}
+
+.slider .arrow button, .slider2 .arrow button, .slider3 .arrow button {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+/* Estilo para los títulos */
+h1 {
+    font-family: 'Mulish', sans-serif; /* Fuente acorde al resto del diseño */
+    font-size: 36px; /* Tamaño del título */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Separación entre el título y el slider */
+    color: #333; /* Color del texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el texto y los íconos */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    margin-top: 20px;
+    text-align: center; /* Centra el botón y el formulario */
+}
+
+/* Botón para mostrar el formulario */
+#toggleFormButton {
+    padding: 10px 20px;
+    background-color: #ff79a6; /* Color rosado pastel */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.warning {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#toggleFormButton:hover {
+    background-color: #ff5184; /* Oscurece un poco el color al pasar el cursor */
+}
+
+/* Formulario oculto inicialmente */
+#orderForm {
+    display: none; /* Ocultar inicialmente */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los campos del formulario */
+}
+
+
+#orderForm input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+}
+
+#orderForm button {
+    padding: 10px 20px;
+    background-color: #ff79a6; /* Color rosado pastel */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#orderForm button:hover {
+    background-color: #ff5184; /* Oscurece un poco el color al pasar el cursor */
+}
+
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .slider, .slider2, .slider3 {
+        padding: 20px 10px;
+    }
+    .slider .product, .slider2 .product2, .slider3 .product3 {
+        flex: 0 0 45%;
+        max-width: 45%;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slider .product, .slider2 .product2, .slider3 .product3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .slider .arrow, .slider2 .arrow, .slider3 .arrow {
+        display: none; /* Oculta flechas en pantallas muy pequeñas */
+    }
+}
