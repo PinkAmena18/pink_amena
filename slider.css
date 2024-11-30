@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +14,8 @@ body {
     align-items: center; /* Centra horizontalmente los carruseles */
     min-height: 100vh; /* Ocupa toda la altura de la ventana */
     background-color: #ffeef7; /* Fondo rosado pastel */
+    font-family: "Poppins", sans-serif;
+
 }
 
 
